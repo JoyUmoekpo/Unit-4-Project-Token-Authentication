@@ -12,7 +12,7 @@ import AuthContext from './store/authContext';
 
 const App = () => {
 
-  const authCtx = useContext(AuthContext)
+  const authCtx = useContext(AuthContext);
 
   return (
     <div className='app'>
