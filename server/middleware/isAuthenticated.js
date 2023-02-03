@@ -14,9 +14,9 @@ module.exports = {
 		//  Lines 16 - 19 will send a console log and status code of 401 if the headerToken is not present.
 
 		if (!headerToken) {
-			console.log("ERROR IN auth middleware");
+			console.log("Middleware Error");
 			res.sendStatus(401);
-		}
+		};
 
 		//Line 18 is declaring the token variable.
 
@@ -29,14 +29,14 @@ module.exports = {
 			//This will send a status code for a server error
 			err.statusCode = 500;
 			throw err;
-		}
+		};
 
 		if (!token) {
-			const error = new Error("Not authenticated.");
+			const error = new Error("You are not authenticated to view this.");
 			//This will send a status code for a client error
 			error.statusCode = 401;
 			throw error;
-		}
+		};
 
 		next();
 	},

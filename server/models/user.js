@@ -1,5 +1,5 @@
-const {DataTypes} = require('sequelize')
-const {sequelize} = require('../util/database')
+const {DataTypes} = require('sequelize');
+const {sequelize} = require('../util/database');
 
 module.exports = {
   User : sequelize.define('user', {
@@ -12,4 +12,4 @@ module.exports = {
       username: DataTypes.STRING,
       hashedPass: DataTypes.STRING
   })
-}
+};

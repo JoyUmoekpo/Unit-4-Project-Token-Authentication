@@ -1,6 +1,5 @@
-const {DataTypes} = require('sequelize')
-
-const {sequelize} = require('../util/database')
+const {DataTypes} = require('sequelize');
+const {sequelize} = require('../util/database');
 
 module.exports = {
     Post : sequelize.define('post', {
@@ -14,4 +13,4 @@ module.exports = {
         content: DataTypes.TEXT,
         privateStatus: DataTypes.BOOLEAN
     })
-}
+};
