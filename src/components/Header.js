@@ -1,8 +1,11 @@
-import {NavLink} from 'react-router-dom'
+import { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
 
-import logo from '../assets/dm-logo-white.svg'
+import logo from '../assets/dm-logo-white.svg';
+import AuthContext from '../store/authContext';
 
 const Header = () => {
+    const authCtx = useContext(AuthContext)
 
     const styleActiveLink = ({ isActive }) => {
         return {
